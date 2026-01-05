@@ -1,0 +1,32 @@
+# Copyright (C) 2026 Glitchsolvers Dev Team
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Skeleton 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/skeleton\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-01-05T18:59:47+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: skeleton\n"
+
+#. Plugin Name of the plugin
+#. Description of the plugin
+#: skeleton.php
+#: skeleton.php:29
+#: skeleton.php:30
+msgid "Skeleton"
+msgstr ""
+
+#. Author of the plugin
+#: skeleton.php
+msgid "Glitchsolvers Dev Team"
+msgstr ""
+
+#: skeleton.php:34
+msgid "Hello world"
+msgstr ""

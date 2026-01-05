@@ -1,0 +1,50 @@
+services:
+
+  db:
+    image: mysql:8
+    volumes:
+      - db_data:/var/lib/mysql:delegated
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: passw0rd
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: word
+      MYSQL_PASSWORD: passw0rd
+
+  wordpress:
+    depends_on:
+      - db
+    container_name: wordpress_skeleton
+    image: wordpress_skeleton
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - 9090:80
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DEBUG: true
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: word
+      WORDPRESS_DB_PASSWORD: passw0rd
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG_LOG: /var/www/html/wp-content/plugins/skeleton/logs/plugin.log
+      WORDPRESS_CONFIG_EXTRA: |
+        include '/var/www/html/wp-config.dev.php';
+    volumes:
+      - ./config/docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./config/wordpress/wp-config.dev.php:/var/www/html/wp-config.dev.php
+      - .:/var/www/html/wp-content/plugins/skeleton
+      
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    restart: unless-stopped
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+      - UPLOAD_LIMIT=1300M
+
+volumes:
+  db_data:
