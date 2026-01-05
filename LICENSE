@@ -1,0 +1,32 @@
+Glitchsolvers – Skeleton
+Copyright (C) 2025  Glitchsolvers Dev Team
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+---
+
+### Summary of the GNU General Public License v2
+
+You are free to:
+- Use this plugin for personal or commercial projects.
+- Modify the source code as you wish.
+- Redistribute the original or modified plugin, as long as you keep it under the same GPL license.
+
+You must:
+- Include a copy of this license with any redistribution.
+- Make the source code available to anyone who receives a binary or compiled version.
+
+For the full license text, visit:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
