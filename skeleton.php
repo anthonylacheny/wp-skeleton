@@ -29,6 +29,7 @@ function add_skeleton_menu()
          capability: 'manage_options',
          menu_slug: 'skeleton',
          callback: function () {
+            $my_var = 'Ma variable';
             echo '<div class="wrap"><h1>' . __('Hello world', 'skeleton') . '</h1></div>';
          },
          icon_url: 'dashicons-id',
