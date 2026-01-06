@@ -1,0 +1,10 @@
+/**
+ * Theme Name: Skeleton
+ * Template:   twentytwentyfive
+ * Version:    0.0.1
+ */
+
+.wp-block-heading {
+    background-color: blue;
+    color: white;
+}
