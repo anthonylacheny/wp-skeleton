@@ -1,11 +1,14 @@
 {
-    "name": "Wordpress",
+    "name": "Skeleton Theme",
     "dockerComposeFile": [
-        "../docker-compose.yml",
+        "../../docker-compose.yml",
         "docker-compose.yml"
     ],
     "service": "wordpress",
-    "workspaceFolder": "/var/www/html/wp-content/plugins/skeleton",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/theme",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached"
+    ],
     "shutdownAction": "stopCompose",
     "postCreateCommand": "php -v",
     "remoteUser": "vscode",

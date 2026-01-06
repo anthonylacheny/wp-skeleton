@@ -34,7 +34,9 @@ services:
     volumes:
       - ./config/docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./config/wordpress/wp-config.dev.php:/var/www/html/wp-config.dev.php
-      - .:/var/www/html/wp-content/plugins/skeleton
+      - ./plugin:/var/www/html/wp-content/plugins/skeleton
+      - ./theme:/var/www/html/wp-content/themes/skeleton
+      - wp_data:/var/www/html
       
 
   phpmyadmin:
@@ -48,3 +50,4 @@ services:
 
 volumes:
   db_data:
+  wp_data:

@@ -1,0 +1,8 @@
+services:
+
+    wordpress:
+        container_name: wordpress_skeleton_theme_vscode
+        image: wordpress_skeleton_theme_vscode
+        build:
+            context: .devcontainer/theme
+            dockerfile: Dockerfile
