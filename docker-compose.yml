@@ -36,8 +36,6 @@ services:
       - ./config/wordpress/wp-config.dev.php:/var/www/html/wp-config.dev.php
       - ./plugin:/var/www/html/wp-content/plugins/skeleton
       - ./theme:/var/www/html/wp-content/themes/skeleton
-      - wp_data:/var/www/html
-      
 
   phpmyadmin:
     image: phpmyadmin:5.2.1
@@ -50,4 +48,3 @@ services:
 
 volumes:
   db_data:
-  wp_data:
