@@ -1,0 +1,39 @@
+{
+    "name": "Skeleton Theme",
+    "dockerComposeFile": ["../../docker-compose.yml", "docker-compose.yml"],
+    "service": "wordpress",
+    "workspaceFolder": "/skeleton/theme",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/skeleton,type=bind,consistency=cached"
+    ],
+    "shutdownAction": "stopCompose",
+    "postCreateCommand": "php -v",
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "yaml.customTags": [
+                    "!tagged_iterator",
+                    "!tagged"
+                ]
+            },
+            "extensions": [
+                "xdebug.php-pack",
+                "redhat.vscode-yaml",
+                "bmewburn.vscode-intelephense-client",
+                "mrmlnc.vscode-apache",
+                "eamodio.gitlens",
+                "donjayamanne.githistory",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "xabikos.javascriptsnippets",
+                "blackboxapp.blackbox",
+                "pawelborkar.jellyfish",
+                "usernamehw.errorlens",
+                "wayou.vscode-todo-highlight",
+                "alefragnani.bookmarks"
+            ]
+        }
+    }
+}

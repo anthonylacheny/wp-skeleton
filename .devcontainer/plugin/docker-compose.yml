@@ -1,0 +1,11 @@
+services:
+
+    wordpress:
+        container_name: wordpress_skeleton_plugin_vscode
+        image: wordpress_skeleton_plugin_vscode
+        build:
+            context: .devcontainer/plugin
+            dockerfile: Dockerfile
+        ports:
+            - 9090:80
+                
